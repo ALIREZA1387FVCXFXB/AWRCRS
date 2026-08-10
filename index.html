@@ -1,67 +1,115 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>تکنولوژی دیبا</title>
-    <style>
-        /* پس‌زمینه خاکستری روشن */
-        body { 
-            font-family: 'Tahoma', sans-serif; 
-            text-align: center; 
-            background-color: #f0f2f5; 
-            padding: 20px;
-            margin: 0;
-        }
-        
-        /* کارت سفید وسط صفحه */
-        .container { 
-            max-width: 400px; 
-            margin: auto; 
-            background: #ffffff; 
-            padding: 25px; 
-            border-radius: 20px; 
-            box-shadow: 0 8px 20px rgba(0,0,0,0.05); 
-        }
+.btn .label b{ display: block; font-size: 1rem; font-weight: 800; }
+    .btn .label span{ font-size: 0.8rem; color: var(--muted); }
 
-        h1 { color: #333; font-size: 22px; margin-bottom: 10px; }
-        p { color: #666; margin-bottom: 25px; }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(207,214,223,0.15), rgba(255,255,255,0.05));
+      border-color: rgba(207,214,223,0.3);
+    }
 
-        .btn { 
-            display: block; 
-            background: #007bff; 
-            color: white; 
-            padding: 15px; 
-            margin: 12px 0; 
-            border-radius: 12px; 
-            text-decoration: none; 
-            font-weight: bold; 
-            transition: 0.3s;
-        }
-        .btn:hover { background: #0056b3; } /* کمی تغییر رنگ هنگام لمس */
-        
-        .btn-insta { background: #E1306C; }
-        .btn-tel { background: #0088cc; }
+    /* بخش لوکیشن */
+    .location-box{
+      margin-top: 20px;
+      padding: 15px;
+      background: rgba(0,0,0,0.2);
+      border-radius: 22px;
+      border: 1px dashed rgba(255,255,255,0.15);
+    }
 
-        h3 { color: #444; margin-top: 30px; font-size: 18px; }
-        
-        iframe { width: 100%; border-radius: 15px; margin-top: 10px; border: 1px solid #ddd; }
-    </style>
+    .loc-header{ display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+    .loc-header h3{ font-size: 0.9rem; }
+    
+    .map-container{
+      width: 100%; height: 160px;
+      border-radius: 15px; overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.05);
+    }
+    .map-container iframe{ width: 100%; height: 100%; border: 0; }
+
+    .footer{
+      margin-top: 20px; text-align: center;
+      font-size: 0.75rem; color: var(--muted); opacity: 0.5;
+    }
+
+    @media (max-width: 350px){
+      .btn .label span { display: none; }
+    }
+  </style>
 </head>
+
 <body>
 
-<div class="container">
-    <h1>به تکنولوژی دیبا خوش‌آمدید</h1>
-    <p>خدمات تخصصی تعمیرات وفروش</p>
+  <!-- پس‌زمینه متحرک با آیکون‌ها -->
+  <div class="bg-container">
+    <i class="fa-solid fa-mobile-screen icon-1 floating-icon"></i>
+    <i class="fa-solid fa-laptop icon-2 floating-icon"></i>
+    <i class="fa-solid fa-microchip icon-3 floating-icon"></i>
+    <i class="fa-solid fa-tablet-screen-button icon-4 floating-icon"></i>
+    <i class="fa-solid fa-screwdriver-wrench icon-5 floating-icon"></i>
+    <i class="fa-solid fa-plug icon-6 floating-icon"></i>
+  </div>
 
-    <a href="tel:09134555175" class="btn">تماس با ما</a>
-    <a href="https://instagram.com/your_id" class="btn btn-insta">اینستاگرام ما</a>
-    
+  <div class="card-wrap">
+    <div class="card">
+      
+      <div class="top">
+        <img class="logo" src="IMG_20260810_180409_354.jpg" alt="Logo">
+        <div class="name">YOUR_SHOP_NAME</div>
+        <div class="tagline">مرکز تخصصی تعمیرات موبایل و گجت</div>
+      </div>
 
-    <h3>موقعیت ما روی نقشه:</h3>
-    <!-- کد نقشه گوگل را اینجا جایگزین کن -->
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13554.468223704362!2d54.40747635319553!3d31.862634335789053!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3fa6199bda6de8d1%3A0x4ca719d698cecbf3!2z2YXZiNio2KfbjNmEINmIINqp2KfZhdm-24zZiNiq2LEg2YXYrdmF2K8!5e0!3m2!1sen!2sus!4v1781357224425!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
+      <div class="divider"></div>
+
+      <div class="grid">
+        <!-- واتساپ -->
+        <a href="https://wa.me/989120000000" class="btn primary" target="_blank">
+          <div class="icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="label">
+            <b>واتساپ</b>
+            <span>ارسال پیام مستقیم</span>
+          </div>
+        </a>
+
+        <!-- تلگرام -->
+        <a href="https://t.me/yourusername" class="btn" target="_blank">
+          <div class="icon"><i class="fab fa-telegram"></i></div>
+          <div class="label">
+            <b>تلگرام</b>
+            <span>گفتگوی آنلاین</span>
+          </div>
+        </a>
+
+        <!-- ایمیل -->
+        <a href="mailto:info@example.com" class="btn">
+          <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+          <div class="label">
+            <b>ایمیل</b>
+            <span>info@example.com</span>
+          </div>
+        </a>
+      </div>
+
+      <!-- بخش لوکیشن -->
+      <div class="location-box">
+        <div class="loc-header">
+          <h3><i class="fa-solid fa-location-dot"></i> موقعیت ما</h3>
+          <a href="https://maps.app.goo.gl/YOUR_LINK" target="_blank" style="color: var(--edge); text-decoration: none; font-size: 0.8rem;">باز کردن نقشه</a>
+        </div>
+        <div class="map-container">
+          <!-- جایگزین کردن لینک زیر با لینک Embed گوگل مپ خودتان -->
+          <iframe 
+            src="https://www.google.com/maps?q=YOUR_LOCATION_NAME&output=embed" 
+            allowfullscreen="" 
+            loading="lazy">
+          </iframe>
+        </div>
+      </div>
+
+      <div class="footer">
+        © تمامی حقوق محفوظ است
+      </div>
+
+    </div>
+  </div>
 
 </body>
 </html>
